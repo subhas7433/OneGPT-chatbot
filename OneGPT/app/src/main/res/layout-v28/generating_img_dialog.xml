@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:minWidth="340dp"
+    android:background="@drawable/custom_dialog_bg"
+    android:layout_width="340dp"
+    android:paddingVertical="10dp"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+    <TextView
+        style="@style/TextView.black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Generating a Art"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/pd"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:padding="15dp"
+        android:background="@color/transparent"
+        android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
+        android:layout_gravity="center"
+        app:lottie_cacheComposition="true"
+        app:lottie_loop="true"
+        app:lottie_colorFilter="@color/colorPrimary"
+        app:lottie_rawRes="@raw/loading"
+        app:lottie_speed="1" />
+    <TextView
+        style="@style/TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="It takes less than 30 sec"
+        android:textColor="@color/primary_txt_color"
+        android:textSize="18sp" />
+    <FrameLayout
+        android:id="@+id/ad"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

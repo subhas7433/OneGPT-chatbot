@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startX="1080"
+        android:startY="0"
+        android:endX="0"
+        android:endY="1900"
+        android:type="linear">
+        <item android:offset="0" android:color="#FF24FFA7"/>
+        <item android:offset="1" android:color="#FF1F9961"/>
+    </gradient>
+</selector>

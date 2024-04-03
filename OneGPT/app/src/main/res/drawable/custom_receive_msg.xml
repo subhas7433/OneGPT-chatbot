@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/receive_msg_color_bg"/>
+    <corners android:topLeftRadius="@dimen/msg_radious"
+        android:topRightRadius="@dimen/msg_radious"
+        android:bottomRightRadius="@dimen/msg_radious"
+        android:bottomLeftRadius="@dimen/msg_radious"/>
+
+</shape>

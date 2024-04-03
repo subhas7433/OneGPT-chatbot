@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardElevation="0dp"
+        android:layout_marginHorizontal="10dp"
+        app:cardCornerRadius="@dimen/msg_radious">
+
+        <LinearLayout
+            android:id="@+id/aiModelLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_bg"
+            android:orientation="vertical"
+            android:padding="12dp"
+            style="@style/model_inactive_in_spinner"
+            android:gravity="center_vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/aiImage"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@mipmap/app_logo"/>
+                <TextView
+                    android:id="@+id/aiModelTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:text="GPT-3.5-turbo"
+                    style="@style/TextView.black"
+                    android:textColor="@color/primary_txt_color"
+                    android:textSize="19sp"/>
+                <TextView
+                    android:id="@+id/premium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:drawableRight="@drawable/premium_icon"
+                    android:drawableTint="@color/white"
+                    android:drawablePadding="5dp"
+                    android:paddingVertical="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="6dp"
+                    android:background="@drawable/custom_btn"
+                    android:backgroundTint="@color/premium_clr"
+                    android:textColor="@color/white"
+                    android:text="Premium"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/aiDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:text="@string/demo_ai_model_des"
+                style="@style/TextView"
+                android:textColor="@color/primary_txt_color"
+                android:textSize="12sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/progress1"
+                        android:layout_width="@dimen/circlePg_size"
+                        android:layout_height="@dimen/circlePg_size"
+                        app:cpb_background_progressbar_color="#D3D3D3"
+                        app:cpb_background_progressbar_width="@dimen/circlePg_bg_width"
+                        app:cpb_progress_direction="to_right"
+                        app:cpb_progressbar_color="@color/colorPrimary"
+                        app:cpb_progressbar_width="@dimen/circlePg_active_width"
+                        app:cpb_round_border="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Speed"
+                        android:textSize="12sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/primary_txt_color"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/progress2"
+                        android:layout_width="@dimen/circlePg_size"
+                        android:layout_height="@dimen/circlePg_size"
+                        app:cpb_background_progressbar_color="#D3D3D3"
+                        app:cpb_background_progressbar_width="@dimen/circlePg_bg_width"
+                        app:cpb_progress_direction="to_right"
+                        app:cpb_progressbar_color="@color/colorPrimary"
+                        app:cpb_progressbar_width="@dimen/circlePg_active_width"
+                        app:cpb_round_border="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Context"
+                        android:textSize="12sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/primary_txt_color"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/progress3"
+                        android:layout_width="@dimen/circlePg_size"
+                        android:layout_height="@dimen/circlePg_size"
+                        app:cpb_background_progressbar_color="#D3D3D3"
+                        app:cpb_background_progressbar_width="@dimen/circlePg_bg_width"
+                        app:cpb_progress_direction="to_right"
+                        app:cpb_progressbar_color="@color/colorPrimary"
+                        app:cpb_progressbar_width="@dimen/circlePg_active_width"
+                        app:cpb_round_border="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Parameter"
+                        android:textSize="12sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/primary_txt_color"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/modelSelected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:paddingVertical="5dp"
+                android:layout_gravity="end"
+                android:paddingHorizontal="6dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:background="@drawable/custom_btn"
+                android:textColor="@color/white"
+                android:text="Selected"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

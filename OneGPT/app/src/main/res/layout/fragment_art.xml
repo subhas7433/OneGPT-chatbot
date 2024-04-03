@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_layout_bg"
+    android:gravity="center_horizontal"
+    android:id="@+id/artLV"
+    android:orientation="vertical"
+    tools:context=".ArtFragment">
+
+    <!--Top Navbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:translationZ="1dp"
+        android:background="@color/toolbar_white"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/topNav"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_nav_height"
+            android:paddingBottom="5dp"
+
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/menu_icon"
+                />
+            <ImageView
+                android:id="@+id/scrollToBottom"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/custom_btn"
+                android:padding="12dp"
+                android:rotation="90"
+                android:visibility="gone"
+                android:src="@drawable/back_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:tint="@color/white" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/art_title"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/navbar_title_font_size"
+                style="@style/TextView.black"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+            <LinearLayout
+                android:id="@+id/openSubscription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/purchaseIMG"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:src="@drawable/premium_icon"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:paddingTop="5dp"
+                android:text="--------- Explore amazing art ---------"
+                android:textColor="@color/secondary_txt_color"
+                android:textSize="12sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:scrollbars="none"
+                android:visibility="gone"
+                tools:listitem="@layout/art_imageview_recycle" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/pd"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="250dp"
+                android:padding="10dp"
+                android:background="@color/transparent"
+                android:scaleType="fitCenter"
+                app:lottie_autoPlay="true"
+                app:lottie_cacheComposition="true"
+                app:lottie_loop="true"
+                app:lottie_colorFilter="@color/colorPrimary"
+                app:lottie_rawRes="@raw/loading"
+                app:lottie_speed="1" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/messageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="-1dp"
+            android:layout_marginBottom="-1dp"
+            android:background="@drawable/custom_input_chatbox"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="7dp"
+            android:paddingVertical="8dp"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/promptText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingTop="3dp"
+                android:paddingBottom="4dp"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/custom_card"
+                android:backgroundTint="@color/gray_bg"
+                android:hint="Type any query"
+                android:maxLength="450"
+                android:maxLines="8"
+                android:minLines="2"
+                android:textColor="@color/primary_txt_color"
+                android:textColorHint="@color/hint"
+                android:textSize="14sp" />
+            <ImageView
+                android:id="@+id/clearTxt"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/custom_btn"
+                android:backgroundTint="@color/mid_black"
+                android:padding="3.5dp"
+                android:visibility="gone"
+                android:src="@drawable/close_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/toolbar_white" />
+            <ImageView
+                android:id="@+id/artMic"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:padding="9dp"
+                android:layout_marginHorizontal="4dp"
+                android:src="@drawable/mic_icon"
+                app:tint="@color/dark_gray" />
+            <ImageView
+                android:id="@+id/generateBtn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/custom_btn"
+                android:padding="8.5dp"
+                android:src="@drawable/generate_ic"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout6"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

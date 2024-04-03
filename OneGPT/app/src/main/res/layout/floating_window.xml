@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:elevation="10dp"
+    android:id="@+id/floatingL"
+    android:background="@drawable/custom_dialog_bg"
+    android:paddingHorizontal="6dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="@dimen/dialog_with"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:paddingStart="5dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/primary_txt_color"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/creditLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 Credit Left"
+            android:textSize="10sp"
+            android:visibility="gone"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="12dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_btn"/>
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:paddingHorizontal="6dp"
+            android:src="@drawable/resize_icon"/>
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="3dp"
+            android:layout_gravity="end"
+            android:padding="7dp"
+            android:src="@drawable/close_icon" />
+    </LinearLayout>
+    <!--Type Quary section-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/typeQuery"
+        android:layout_width="@dimen/dialog_with"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="55dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+            <EditText
+                android:id="@+id/messageBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="start"
+                android:hint="Type any quary"
+                android:maxLength="120"
+                android:maxLines="4"
+                android:minLines="4"
+                android:padding="10dp"
+                android:paddingVertical="12dp"
+                android:focusable="true"
+                android:textColor="@color/primary_txt_color"
+                android:textColorHint="@color/hint"
+                android:textSize="@dimen/normal_txt_size" />
+
+            <TextView
+                android:id="@+id/noBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="6dp"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:background="@drawable/custom_dialog_bg"
+                android:backgroundTint="#F46257"
+                android:textColor="#FFFFFF"
+                android:text="You don't have enough Credit"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/paste"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="8dp"
+            app:cornerRadius="@dimen/msg_radious"
+            android:gravity="center"
+            android:background="@drawable/custom_btn"
+            android:backgroundTint="@color/color_primary_light"
+            android:elevation="0dp"
+            android:stateListAnimator="@null"
+            android:text="Paste"
+            android:textColor="@color/colorPrimary"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/clear"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/custom_btn"
+            android:backgroundTint="@color/btnLight"
+            android:elevation="0dp"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="Clear"
+            android:textAllCaps="false"
+            android:textColor="@color/mid_black"
+            android:textSize="12sp"
+            app:cornerRadius="@dimen/msg_radious"
+            app:layout_constraintBottom_toBottomOf="@+id/paste"
+            app:layout_constraintStart_toEndOf="@+id/paste" />
+
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:src="@drawable/send_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--Message view section-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/showResult"
+        android:layout_width="@dimen/dialog_with"
+        android:layout_height="@dimen/dialog_height"
+        android:visibility="gone">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/userMsgView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="3dp"
+                        android:background="@drawable/custom_sent_msg"
+                        android:backgroundTint="@color/btnLight"
+                        android:minWidth="70dp"
+                        android:paddingBottom="2dp"
+                        android:orientation="vertical"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:id="@+id/questionText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="5dp"
+                            android:text="Jems Webb telesope"
+                            android:textColor="@color/primary_txt_color"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/aiAnsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="start"
+                    android:paddingBottom="60dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@drawable/custom_receive_msg"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/showMessageAI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/replyText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="120dp"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="@string/damy_txt"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/seeMore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:minWidth="120dp"
+                            android:paddingHorizontal="15dp"
+                            android:text="Read more"
+                            android:textColor="@color/colorOnPrimary"
+                            android:textSize="@dimen/normal_txt_size"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end">
+
+                            <TextView
+                                android:id="@+id/speak"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:drawableStart="@drawable/speaker_icon"
+                                android:drawablePadding="5dp"
+                                android:paddingHorizontal="12dp"
+                                android:paddingVertical="6dp"
+                                android:text=""
+                                android:visibility="gone"
+                                android:textColor="@color/iconColor"
+                                android:textSize="@dimen/mini_txt_size" />
+
+                            <TextView
+                                android:id="@+id/replyCopy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/copy_icon"
+                                android:drawableTint="@color/white"
+                                android:drawablePadding="5dp"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="5dp"
+                                android:text=""
+                                android:textColor="@color/iconColor"
+                                android:textSize="@dimen/mini_txt_size" />
+
+                            <TextView
+                                android:id="@+id/replyShare"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/share_icon"
+                                android:drawableTint="@color/white"
+                                android:drawablePadding="5dp"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="5dp"
+                                android:text=""
+                                android:textColor="@color/iconColor"
+                                android:textSize="@dimen/mini_txt_size" />
+
+                        </LinearLayout>
+
+                        </LinearLayout>
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/typingAnni"
+                            android:layout_width="65dp"
+                            android:layout_height="35dp"
+                            app:lottie_autoPlay="true"
+                            android:scaleType="centerCrop"
+                            app:lottie_cacheComposition="true"
+                            app:lottie_loop="true"
+                            android:visibility="gone"
+                            app:lottie_speed="1"
+                            app:lottie_colorFilter="@color/primary_txt_color"
+                            app:lottie_rawRes="@raw/chat_loading"
+                            android:background="@color/transparent" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <TextView
+            android:id="@+id/newQuery"
+            android:layout_width="130dp"
+            android:layout_height="38dp"
+            android:gravity="center"
+            android:elevation="30dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_btn"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:paddingVertical="0dp"
+            android:text="New query"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            app:cornerRadius="@dimen/msg_radious"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

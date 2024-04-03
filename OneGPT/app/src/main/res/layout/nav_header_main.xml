@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:paddingHorizontal="20dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/openActiveSubscription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_btn"
+                android:backgroundTint="@color/premium_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="8.5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Active Subscriber"
+                    android:textColor="@color/premium_clr"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/demo_circle_img"
+                android:layout_height="@dimen/demo_circle_img"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/app_logo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/custom_outline_btn"
+                android:backgroundTint="@color/gray_bg">
+                <TextView
+                    android:id="@+id/credit"
+                    style="@style/TextView.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Credits"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="9.5sp"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="6dp"
+                    android:background="@color/gray_bg"/>
+
+                <TextView
+                    android:id="@+id/premiumCredit"
+                    style="@style/TextView.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Premium Credits"
+                    android:textColor="@color/premium_clr"
+                    android:textSize="9.5sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingHorizontal="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="@dimen/btn_radious">
+
+                <LinearLayout
+                    android:id="@+id/chat"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:layout_height="@dimen/main_menu_height"
+                    android:paddingHorizontal="@dimen/nav_btn_layout_padding_HZ"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/chatTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Chat"
+                        android:textColor="@color/white"
+                        android:paddingStart="10dp"
+                        android:textSize="15sp"/>
+                    <ImageView
+                        android:id="@+id/chatIMG"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/chat_filled"
+                        app:tint="@color/white"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/transparent"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/btn_radious"
+                >
+                <LinearLayout
+                    android:id="@+id/art"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_menu_height"
+                    android:paddingHorizontal="@dimen/nav_btn_layout_padding_HZ"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/artTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/art_title"
+                        android:layout_weight="1"
+                        android:textColor="@color/dark_gray"
+                        android:paddingStart="10dp"
+                        android:textSize="15sp"/>
+                    <ImageView
+                        android:id="@+id/artIMG"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/img_filled"
+                        app:tint="@color/dark_gray"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardCornerRadius="@dimen/btn_radious">
+                <LinearLayout
+                    android:id="@+id/aiTool"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_menu_height"
+                    android:paddingHorizontal="@dimen/nav_btn_layout_padding_HZ"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/aiToolTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ai_tasks_title"
+                        android:layout_weight="1"
+                        android:textColor="@color/dark_gray"
+                        android:paddingStart="10dp"
+                        android:textSize="15sp"/>
+                    <ImageView
+                        android:id="@+id/aiToolIMG"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ai_tools"
+                        app:tint="@color/dark_gray"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardElevation="0dp"
+
+                app:cardBackgroundColor="@color/transparent"
+                app:cardCornerRadius="@dimen/btn_radious">
+                <LinearLayout
+                    android:id="@+id/purchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_menu_height"
+                    android:paddingHorizontal="@dimen/nav_btn_layout_padding_HZ"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/purchaseTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Subscriptions"
+                        android:layout_weight="1"
+                        android:textColor="@color/dark_gray"
+                        android:paddingStart="10dp"
+                        android:textSize="15sp"/>
+                    <ImageView
+                        android:id="@+id/purchaseIMG"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/premium_icon"
+                        app:tint="@color/dark_gray"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardCornerRadius="@dimen/btn_radious"
+                >
+                <LinearLayout
+                    android:id="@+id/tool"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_menu_height"
+                    android:paddingHorizontal="@dimen/nav_btn_layout_padding_HZ"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/toolTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tool_title"
+                        android:layout_weight="1"
+                        android:textColor="@color/dark_gray"
+                        android:paddingStart="10dp"
+                        android:textSize="15sp"/>
+                    <ImageView
+                        android:id="@+id/toolIMG"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginEnd="2dp"
+                        android:src="@drawable/tool_filled"
+                        app:tint="@color/dark_gray"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/openSubscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_card"
+                android:backgroundTint="@color/color_primary_light"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get your own"
+                    style="@style/TextView.black"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextView.Light"
+                    android:layout_marginTop="4dp"
+                    android:text="App and Website"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/primary_txt_color"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/subTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Take a look"
+                    android:layout_gravity="end"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="15dp"
+                    android:background="@drawable/custom_btn"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="ChatBot listed in this app may produce inaccurate information about people, places, or facts."
+                android:textColor="@color/dark_gray"
+                android:gravity="center"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_layout_bg"
+    tools:context=".AIToolsActivity">
+
+    <LinearLayout
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/toolbar_white"
+        android:paddingHorizontal="5dp"
+        android:translationZ="1dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/navbar_padd_bottom">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@drawable/back_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/ai_tasks_title"
+            style="@style/TextView.black"
+            android:textColor="@color/primary_txt_color"
+            android:textSize="@dimen/navbar_title_font_size"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/radio_btn_selector"
+                    android:textColor="@color/radio_txt_btn_clr"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/ai_toot_margin_end"
+                    android:textSize="@dimen/ai_tool_radio_btn_txt_size"
+                    android:button="@color/transparent"
+                    android:text="All"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/radio_btn_selector"
+                    android:textColor="@color/radio_txt_btn_clr"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/ai_toot_margin_end"
+                    android:textSize="@dimen/ai_tool_radio_btn_txt_size"
+                    android:button="@color/transparent"
+                    android:text="Experts"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/radio_btn_selector"
+                    android:textColor="@color/radio_txt_btn_clr"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/ai_toot_margin_end"
+                    android:textSize="@dimen/ai_tool_radio_btn_txt_size"
+                    android:button="@color/transparent"
+                    android:text="What's new"/>
+            </RadioGroup>
+        </HorizontalScrollView>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingHorizontal="5dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/whatsnewLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="What's new"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:textColor="@color/primary_txt_color"
+                        android:textSize="24sp"
+                        android:visibility="gone"
+                        style="@style/TextView.black"
+                        android:textStyle="bold"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/toolRecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/ai_tools_list_recycle"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/expertsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Experts"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:textColor="@color/primary_txt_color"
+                        android:textSize="24sp"
+                        style="@style/TextView.black"
+                        android:textStyle="bold"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/ai_tools_list_recycle"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

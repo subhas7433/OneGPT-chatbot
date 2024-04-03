@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" />
+    <corners android:radius="@dimen/msg_radious"/>
+    <stroke
+        android:width="@dimen/default_stroke"
+        android:color="@color/mid_black" /> <!-- Blue outline color -->
+</shape>
+
+

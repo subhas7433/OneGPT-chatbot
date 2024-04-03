@@ -1,0 +1,73 @@
+<resources>
+    <style name="Widget.ChatOpenAI.AppWidget.Container" parent="android:Widget">
+        <item name="android:id">@android:id/background</item>
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+
+    <style name="Widget.ChatOpenAI.AppWidget.InnerView" parent="android:Widget">
+        <item name="android:background">?android:attr/colorBackground</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <!-- Define colors and other attributes for light mode -->
+    <!-- Light theme colors -->
+<!--    <style name="AppTheme.Light" parent="Theme.AppCompat.Light">-->
+<!--        <item name="android:windowLightStatusBar">true</item>-->
+
+<!--    </style>-->
+
+<!--    &lt;!&ndash; Dark theme colors &ndash;&gt;-->
+<!--    <style name="AppTheme.Dark" parent="Theme.AppCompat">-->
+<!--        <item name="android:windowLightStatusBar">false</item>-->
+
+<!--    </style>-->
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/window_bg_bt_dialog</item>
+        <!--        <item name="android:windowIsFloating">true</item>-->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+<!--        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>-->
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="background">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Button" parent="Widget.Material3.Button">
+        <item name="android:fontFamily">@font/regular</item>
+
+    </style>
+
+
+    <style name="TextView.Bold">
+        <item name="android:fontFamily">@font/bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView.Medium">
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextView.black">
+        <item name="android:fontFamily">@font/black</item>
+
+    </style>
+
+    <style name="TextView.Light">
+        <item name="android:fontFamily">@font/light</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="model_inactive_in_spinner"></style>
+
+    <style name="model_active_in_spinner"></style>
+
+</resources>

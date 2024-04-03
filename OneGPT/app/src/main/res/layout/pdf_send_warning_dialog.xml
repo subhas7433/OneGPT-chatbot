@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/custom_dialog_bg"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/baseline_picture_as_pdf_24"/>
+
+        <TextView
+            android:id="@+id/pdfName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:text="@string/app_fullname"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary" />
+        <TextView
+            android:id="@+id/warningText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            style="@style/TextView"
+            android:text="Do you want to exit ?"
+            android:textColor="@color/primary_txt_color"
+            android:gravity="center"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/no"
+                android:layout_width="130dp"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/btnLight"
+                android:gravity="center"
+                android:text="No"
+                android:stateListAnimator="@null"
+                android:textColor="@color/mid_black"
+                android:textSize="14sp"
+                app:cornerRadius="@dimen/btn_radious" />
+
+            <Button
+                android:id="@+id/yes"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/colorPrimary"
+                android:stateListAnimator="@null"
+                android:gravity="center"
+                android:text="Yes"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:cornerRadius="@dimen/btn_radious" />
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/ad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

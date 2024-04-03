@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#22B579</color>
+    <color name="colorPrimaryDark">#199362</color>
+    <color name="colorwhite">#FFFFFF</color>
+    <color name="colorOnSurface">#CACACA</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+
+    <color name="colorSecondary">#13D588</color>
+    <color name="colorSecondaryVariant">#13D588</color>
+    <color name="colorOnSecondary">#222</color>
+
+    <color name="premium_clr">#F1AF0D</color>
+    <color name="premium_bg">#776232</color>
+
+    <color name="web_send_msg_color">@color/toolbar_white</color>
+    <color name="web_receive_msg_color">#057753</color>
+    <color name="web_color">#02AA75</color>
+
+    <color name="toolbar_white">#232323</color>
+    <color name="subscription_icon">#07E1B5</color>
+
+    <color name="colorOnPrimary">@color/colorPrimary</color>
+    <color name="colorOnPrimaryDark">#03BC96</color>
+
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="primary_txt_color">#FBFBFB</color>
+    <color name="secondary_txt_color">@color/mid_black</color>
+
+    <color name="primary_light">#04332D</color>
+    <color name="color_primary_light">#1A3228</color>
+
+    <color name="send_msg_color">@color/colorPrimary</color>
+    <color name="send_msg_color_bg">@color/colorPrimary</color>
+    <color name="receive_msg_color">#202020</color>
+    <color name="receive_msg_color_bg">#353535</color>
+
+    <color name="main_layout_bg">#171717</color>
+    <color name="chat_layout_bg">#1C1C1C</color>
+    <color name="gray_bg">#333333</color>
+    <color name="line_clr">#03453C</color>
+    <color name="btnLight">#250EBFA0</color>
+
+    <color name="snakbar_bg">#2E2E2E</color>
+
+    <color name="card_white">@color/toolbar_white</color>
+    <color name="iconColor">#99FFFFFF</color>
+    <color name="iconSendColor">#99FFFFFF</color>
+    <color name="mid_black">#E4E4E4</color>
+    <color name="hint">#AED6D6D6</color>
+
+    <color name="black">#FF000000</color>
+    <color name="inactive_mid_black">#353535</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blur_bg">#22EA6122</color>
+    <color name="white_black">#202020</color>
+
+    <color name="msg_colour">@color/colorOnPrimary</color>
+    <color name="plan_box_bg">@color/toolbar_white</color>
+
+    <color name="green">@color/colorPrimary</color>
+    <color name="red">#B6251B</color>
+    <color name="dark_gray">#858585</color>
+    <color name="gray">#6F686868</color>
+
+    <color name="nav_center_clr">#E1101010</color>
+    <color name="nav_end_clr">#00000000</color>
+    <color name="table_bg">#27258174</color>
+
+    <color name="window_bg_bt_dialog">#6F1B1B1B</color>
+    <color name="window_background">#0F0F0F</color>
+</resources>

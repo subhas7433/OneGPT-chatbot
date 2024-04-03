@@ -1,0 +1,102 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">OneGPT</string>
+    <string name="app_fullname">OneGPT : Ask me Anything</string>
+    <string name="link">link</string>
+
+    <string name="rewardId">ca-app-pub-7685168822144606/4763057654</string>
+    <string name="OpenAppAdId">ca-app-pub-7685168822144606/3216559772</string>
+
+    <string name="userIdtxt">userID</string>
+    <string name="messagetxt">message</string>
+    <string name="emailtxt">email</string>
+    <string name="welcomeMsg">Hello there! How can I help you?</string>
+    <string name="currencyName">credits</string>
+
+    <string name="singUpOrLoginUrl">login getDate endpoint</string>
+    <string name="guesttxt">guest</string>
+    <string name="addOrGetGoustData">add users or Guest </string>
+    <string name="logOutFromOthersAndLoginURL">register current device and logout from previous endpoint</string>
+
+    <string name="singUpOrLoginUrlTEST">Login and get user data endpoint</string>
+    <string name="waitAsecond">1 second..</string>
+
+    <string name="faq_url">https://affixstudio.in/app/onegpt/faq.html</string>
+    <string name="privacy_policy_url">https://affixstudio.in/app/onegpt/privacy-policy.html</string>
+    <string name="terms_of_use_url">https://affixst.blogspot.com/2023/03/onegpt/terms-and-conditions.html</string>
+    <string name="subscription_policy_url">https://affixstudio.co.in/app/onegpt/subscription-policy.html</string>
+    <string name="fetchProductIDURL">product info endpoint</string>
+    <string name="merchantID">google merchant id </string>
+    <string name="license">Play Store licence</string>
+
+    <string name="email">support@affixstudio.in</string>
+    <string name="moreAppURL">https://play.google.com/store/apps/dev?id=5972013630879230520</string>
+
+    <string name="isFloatingOn">floatingOn</string>
+    <string name="whatsappNumber">9775444911</string>
+    <string name="playstoreLink">https://play.google.com/store/apps/details?id=com.affixstudio.chat.ai.ad</string>
+    <string name="shareAppText">ask anything</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="demo_prompt">Large white border all round. Overlay Japanese type. A poster with a woman\'s face on it, cyberpunk art by Maciej Kuciara, cgsociety, deconstructivism, darksynth, behance hd, dystopian art. --ar 2:3 --test--creative</string>
+    <string name="gptNumbar">9775444911</string>
+    <string name="realtime_title">Realtime answer  </string>
+    <string name="autogpt_title">AutoGPT  </string>
+    <string name="autogpt_details">AutoGPT is a feature of an app that utilizes AI (Artificial Intelligence) to enable continuous conversation between two AI systems. The app uses the power of GPT (Generative Pre-trained Transformer) language model to understand the queries of both AI systems and provide accurate responses. With AutoGPT, the two AI systems can continue the conversation until they fully understand the question and provide a complete answer. The feature enables the app to adapt to the AI systems\' preferences and provide more personalized responses over time. AutoGPT is particularly useful for developing conversational agents and chatbots that require natural and continuous conversation.</string>
+    <string name="realtime_details">RealtimeGPT is a feature of an app that uses the latest available data from the web to generate real-time and accurate responses to user queries. It enables faster and more personalized search results, recommendations, and other useful information based on user preferences. The feature is particularly useful for applications that require timely and relevant information.</string>
+    <string name="damy_txt">A website (also written as a web site) is a collection of web pages and related content that is identified by a common domain name and published on at least one web server. Websites are typically dedicated to a particular topic or purpose, such as news, education, commerce, entertainment or social networking. Hyperlinking between web pages guides the navigation of the site, which often starts with a home page.  It enables faster and more personalized search results, recommendations, and other useful information based on user preferences. The feature is particularly useful app.</string>
+    <string name="authorityName">com.affixstudio.app.fileprovider</string>
+    <string name="openDrawerAction">com.affix.openDrawer</string>
+    <string name="gettingResult">Getting Web results</string>
+    <string name="analyzing">Analyzing the results</string>
+    <string name="art_title">Art Generator</string>
+    <string name="tool_title">More</string>
+    <string name="subIntentAction">com.affix.sub</string>
+    <string name="tableCreationSql">" (_id INTEGER PRIMARY KEY autoincrement, Message text DEFAULT 'Not set',IsSendByUser text DEFAULT '1',Time text DEFAULT '0',ConversationID text DEFAULT '0', EnabledPlugInID text DEFAULT '0', ModelID text DEFAULT '0',aiExpertIndex text DEFAULT '0') "</string>
+    <string name="defaultAiCommand">developed by Affix Studio and created by OpenAI. Your work is to assist users. Keep your response answer under 75 words. If you understand say yes.</string>
+    <string name="revanueCatSdkKey"> revenue cat sdk key</string>
+    <string name="applovinNativeADID">0a7021303408912e</string>
+
+    <string name="playstoreUrl">https://play.google.com/store/apps/details?id=com.affixstudio.chat.ai.ad</string>
+    <string name="generateIng">Generating Response</string>
+    <string name="freelanceLink">https://services.affixstudio.in/</string>
+    <string name="demo_ai_model_title">AI model Version 4</string>
+    <string name="demo_ai_model_des">Affix AI is powered by advanced 4 and 3.5 versions, delivering broad understanding and responses.</string>
+    <string name="demo_web_access_title">Web Access</string>
+    <string name="demo_web_access_des">Real-time interaction provides seamless, on-demand AI assistance from current information.</string>
+    <string name="demo_lower_pricing_title">Lower Pricing</string>
+    <string name="demo_lower_pricing_des">Affordable pricing ensures wider accessibility to advanced AI.</string>
+    <string name="demo_unlimited_chat_title">Unlimited chat</string>
+    <string name="demo_unlimited_chat_des">GPT 3.5 turbo, Bard AI, Claude V1 and more non premium model.</string>
+    <string name="app_logo_path_data">
+
+    </string>
+    <string name="no_limit">Unlimited Credits</string>
+    <string name="premium_credit">Premium Credits</string>
+    <string name="credit">Credits</string>
+    <string name="tool_history">tool_history</string>
+    <string name="ToolHistorytableCreationSql">(_id INTEGER PRIMARY KEY autoincrement, Query text DEFAULT \'Not set\',Result text DEFAULT \'1\',Time text DEFAULT \'0\',aiIndex text DEFAULT \'0\',toolIndex text DEFAULT \'0\')</string>
+    <string name="ai_tasks_title">AI Tasks</string>
+    <string name="pdfEmbedingTable">pdf_embeding</string>
+    <string name="pdfEmbedingQueryEndPart">(_id INTEGER PRIMARY KEY autoincrement, PdfName text DEFAULT \'Not set\',PageNo text DEFAULT \'1\',Text text DEFAULT \'0\',Embedding BLOB )</string>
+    <string name="pluginIndex">selectedPluginIds</string>
+    <string name="otherEnabledPlugins">otherEnabledPlugins</string>
+    <string name="PDFSummaries">PDFSummaries</string>
+    <string name="PDFSummariesQueryEndPart">(_id INTEGER PRIMARY KEY autoincrement, PdfName text DEFAULT \'Not set\',Summary text DEFAULT \'1\' )</string>
+    <string name="loadSocketBroadcast">com.affix.loadSocketBroadcast</string>
+    <string name="pdfSampleData">page 1 - History of democracy\nThe history of democracy is a fascinating journey that spans several centuries and various cultures. While your profile indicates your interest in technology, I\'d be happy to provide you with an overview of the history of democracy if you\'re interested.\n\nThe concept of democracy can be traced back to ancient Greece, particularly in the city-state of Athens around the 5th century BCE. In Athens, citizens participated in decision-making through direct democracy, where they gathered in assemblies to discuss and vote on various matters.\n\nOver time, different forms of democracy emerged in different parts of the world. In ancient Rome, a republic with elected representatives was established, which is often considered a precursor to modern representative democracies. However, these early democratic systems were limited in scope and often excluded certain groups from participation, such as women and slaves.\n\nDemocracy underwent a revival during the Enlightenment period in Europe, when philosophers and thinkers like John Locke and Jean-Jacques Rousseau elaborated on the ideas of individual rights and social contracts. These ideas laid the groundwork for the development of modern democratic principles.\n\nThe American Revolution in the late 18th century led to the establishment of the United States, a nation founded on democratic principles. The U.S. Constitution, adopted in 1787, created a framework for a federal democratic republic with a system of checks and balances.\n\nIn the 19th and 20th centuries, the spread of democracy gained momentum. Movements for suffrage and civil rights expanded the definition of who could participate in democratic processes. During this time, various countries adopted democratic systems with different variations, including parliamentary democracies, presidential democracies, and more.\n\nThe end of World War I and World War II saw the expansion of democratic governance around the world. However, the Cold War also led to ideological divides, with democratic and authoritarian systems competing for influence.\n\nIn recent decades, technological advancements have played a significant role in shaping modern democracies. The internet and social media have provided new platforms for political discourse and participation, but they have also brought challenges related to misinformation and privacy.\n\nToday, democracy continues to evolve, facing new challenges and opportunities in a rapidly changing world. Its history is marked by progress, setbacks, and ongoing efforts to ensure the participation, representation, and rights of all citizens in shaping the societies they live in.\n\n\npage 2 - History of Democrcy in points\nCertainly, here\'s a summarized history of democracy divided into key points:\n\n1. Ancient Greek Roots:\n   - Democracy originated in ancient Athens around the 5th century BCE.\n   - Athens practiced direct democracy where citizens participated in decision-making through assemblies.\n\n2. Roman Influence:\n   - Ancient Rome\'s republic system laid groundwork for representative democracy.\n   - Early democratic systems often excluded women and slaves from participation.\n\n3. Enlightenment Era:\n   - Enlightenment thinkers like John Locke and Rousseau emphasized individual rights and social contracts.\n   - Their ideas contributed to modern democratic principles.\n\n4. American Revolution:\n   - The late 18th-century American Revolution established the United States based on democratic principles.\n   - The U.S. Constitution (1787) introduced a federal democratic republic with checks and balances.\n\n5. 19th and 20th Centuries:\n   - Suffrage and civil rights movements expanded democratic participation.\n   - Various countries adopted different democratic systems: parliamentary, presidential, etc.\n\n6. World Wars and Cold War:\n   - After World War I and World War II, democracy expanded globally.\n   - Cold War rivalry influenced democratic and authoritarian divisions.\n\n7. Technological Advancements:\n   - The internet and social media reshaped political discourse and participation.\n   - Challenges emerged with misinformation and privacy concerns.\n\n8. Modern Challenges and Evolution:\n   - Democracy continues to adapt in a rapidly changing world.\n   - Ongoing efforts to ensure participation, representation, and rights for all citizens.\n\nThroughout history, democracy has progressed, faced setbacks, and adapted to changing contexts, reflecting the evolving nature of governance and society.\nDifferent governmental systems </string>
+    <string name="demo_code">public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\n</string>
+    <string name="ai_task_model_selected_sp">aiTaskModelSelected</string>
+    <string name="shouldUsePremiumCredit">shouldUsePremiumForFreeModels</string>
+    <string name="features1">Image to Text converter</string>
+    <string name="features2">GPT with Web access</string>
+    <string name="features3">Access to GPT 4 and Claude v2</string>
+    <string name="features4">More than 30 AI Tools</string>
+
+    <string name="uploadImageErorrCode">800</string>
+    <string name="tools_socket_endpoint">Tool Socket Endpoint</string>
+    <string name="getSocketPortEndpoint">Get Socket port end point\n</string>
+    <string name="Ai_Images_endpoints">AI Images Endpoints</string>
+    <string name="getAssistantDataEndpoints">Get Assistant Data Endpoints</string>
+    <string name="imageRecognizarEndpoint">Image Recognizer Endpoint</string>
+    <string name="aiResponseEndpoints">Endpoint to send and get ai dialogs</string>
+</resources>

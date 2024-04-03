@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="@color/card_white"
+    android:orientation="vertical"
+    tools:context=".PurchaseActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_nav_height"
+        android:paddingHorizontal="10dp"
+        android:background="@color/toolbar_white"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@drawable/back_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:text="Subscriptions"
+            android:textAlignment="textStart"
+            style="@style/TextView.black"
+            android:textColor="@color/primary_txt_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.55"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/planVa"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="15dp"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/alreadySubscribed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                app:cardElevation="0.25dp"
+                app:cardCornerRadius="0dp">
+                <LinearLayout
+                    android:id="@+id/haveSub"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:id="@+id/planCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="@color/premium_clr"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="7dp"
+                        android:text="Activate"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        style="@style/TextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome to Premium Access!"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_marginTop="10dp"
+                        style="@style/TextView.black"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/planCategory" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your Subscription is Activated for an Enhanced Experience with all features."
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        style="@style/TextView"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/planCategory" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="7dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="@color/white"
+                        android:layout_gravity="end">
+                        <TextView
+                            android:id="@+id/subPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="INR 500.00"
+                            style="@style/TextView.Bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"/>
+                        <TextView
+                            android:id="@+id/subTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:text="/ WEEK"
+                            android:textAllCaps="false"
+                            style="@style/TextView"
+                            android:textColor="@color/primary_txt_color"
+                            android:textSize="13sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="@drawable/custom_outline_btn"
+                android:backgroundTint="@color/gray_bg">
+                <!-- Table header row -->
+                <TableRow android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:layout_width="@dimen/table_content_width"
+                        android:layout_weight="1"
+                        android:text="Model"
+                        style="@style/TextView.black"
+                        android:textAllCaps="true"
+                        android:textColor="@color/primary_txt_color"
+                        android:textSize="@dimen/table_title_txt_size"
+                        />
+                    <TextView
+                        android:layout_width="@dimen/table_free_width"
+                        android:text="Free"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/mid_black"
+                        android:textSize="@dimen/table_title_txt_size"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:text="Query"
+                        style="@style/TextView.black"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/mid_black"
+                        android:textSize="@dimen/table_title_txt_size"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:id="@+id/freeModelNames"
+                        android:layout_weight="1"
+                        android:layout_width="@dimen/table_content_width"
+                        android:lineSpacingExtra="5dp"
+                        android:textColor="@color/mid_black"
+                        android:text="GPT-3.5-turbo,\nBard AI (PaLM 2)\nClaude Instant v1\nCodeLIama\nHermes LIama2\nGPT with Web access"
+                        android:textSize="@dimen/table_details_txt_size"/>
+                    <ImageView
+                        android:layout_width="@dimen/table_free_width"
+                        android:layout_height="@dimen/table_icon_HW"
+                        android:visibility="gone"
+                        android:src="@drawable/close_icon"/>
+                    <TextView
+                        android:text="Unlimited"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/table_details_txt_size"/>
+
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="@dimen/table_row_margin_top"
+                    android:background="@color/gray_bg"/>
+
+                <TableRow android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="@dimen/table_content_width"
+                        android:layout_weight="1"
+                        android:text="Premium Model"
+                        style="@style/TextView.black"
+                        android:textAllCaps="true"
+                        android:textColor="@color/primary_txt_color"
+                        android:textSize="@dimen/table_title_txt_size"
+                        />
+                    <TextView
+                        android:layout_width="@dimen/table_free_width"
+                        android:text="Free"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/mid_black"
+                        android:textSize="@dimen/table_title_txt_size"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:text="Query"
+                        style="@style/TextView.black"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/mid_black"
+                        android:textSize="@dimen/table_title_txt_size"
+                        />
+
+                </TableRow>
+                <TableRow
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:id="@+id/premiumModelNames"
+                        android:layout_width="@dimen/table_content_width"
+                        android:text="GPT-4,\nClaude v2\nMeta AI (LIama v2)"
+                        android:layout_weight="1"
+                        android:lineSpacingExtra="5dp"
+                        android:textColor="@color/mid_black"
+                        android:textSize="@dimen/table_details_txt_size"/>
+                    <ImageView
+                        android:layout_width="@dimen/table_free_width"
+                        android:layout_height="@dimen/table_icon_HW"
+                        android:visibility="gone"
+                        android:src="@drawable/close_icon"/>
+
+                    <TextView
+                        android:text="40/week\n200/month"
+                        android:textAlignment="center"
+                        android:lineSpacingExtra="5dp"
+                        android:textColor="@color/premium_clr"
+                        android:textSize="@dimen/table_details_txt_size"/>
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="@dimen/table_row_margin_top"
+                    android:background="@color/gray_bg"/>
+
+                <TableRow android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="@dimen/table_content_width"
+                        android:layout_weight="1"
+                        android:text="Others feature"
+                        style="@style/TextView.black"
+                        android:textAllCaps="true"
+                        android:textColor="@color/primary_txt_color"
+                        android:textSize="@dimen/table_title_txt_size"
+                        />
+                    <TextView
+                        android:layout_width="@dimen/table_free_width"
+                        android:text="Free"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/mid_black"
+                        android:textSize="@dimen/table_title_txt_size"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:text="Available"
+                        style="@style/TextView.black"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/mid_black"
+                        android:textSize="@dimen/table_title_txt_size"
+                        />
+
+                </TableRow>
+                <TableRow
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:layout_width="@dimen/table_content_width"
+                        android:text="Image to Text"
+                        android:layout_weight="1"
+                        android:textColor="@color/mid_black"
+                        android:lineSpacingExtra="5dp"
+                        android:textSize="@dimen/table_details_txt_size"/>
+                    <ImageView
+                        android:layout_width="@dimen/table_icon_HW"
+                        android:layout_height="@dimen/table_icon_HW"
+                        android:layout_marginEnd="28dp"
+                        android:src="@drawable/done_ic"
+                        app:tint="@color/colorPrimary"/>
+
+                </TableRow>
+                <TableRow
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:layout_width="@dimen/table_content_width"
+                        android:text="AI Tools"
+                        android:layout_weight="1"
+                        android:textColor="@color/mid_black"
+                        android:lineSpacingExtra="5dp"
+                        android:textSize="@dimen/table_details_txt_size"/>
+                    <ImageView
+                        android:layout_width="@dimen/table_icon_HW"
+                        android:layout_height="@dimen/table_icon_HW"
+                        android:layout_marginEnd="28dp"
+                        android:src="@drawable/done_ic"
+                        app:tint="@color/colorPrimary"/>
+
+                </TableRow>
+            </TableLayout>
+            <LinearLayout
+                android:id="@+id/pricingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Starter Plan"
+                    android:layout_marginTop="5dp"
+                    android:paddingVertical="5dp"
+                    android:textSize="@dimen/navbar_title_font_size"
+                    android:visibility="gone"
+                    android:textColor="@color/primary_txt_color"
+                    android:textStyle="bold"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:id="@+id/sWeek"
+                            android:layout_width="@dimen/plan_lay_width"
+                            android:layout_height="@dimen/plan_lay_height"
+                            android:background="@drawable/custom_premium_bg"
+                            android:backgroundTint="@color/primary_light"
+                            android:gravity="center"
+                            android:layout_marginEnd="5dp"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            android:padding="@dimen/plan_lay_padding">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Weekly"
+                                android:paddingTop="@dimen/plan_duration_padding_top"
+                                android:paddingBottom="@dimen/plan_duration_padding_bottom"
+                                android:paddingHorizontal="15dp"
+                                android:background="@drawable/custom_btn"
+                                android:backgroundTint="@color/white"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="11sp"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:id="@+id/swkpd"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="- ₹13/day"
+                                android:layout_marginTop="10dp"
+                                android:textSize="@dimen/plan_price_txt"/>
+                            <TextView
+                                android:id="@+id/sWprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="₹ 91"
+                                android:layout_marginBottom="-7dp"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/plan_price_txt_size"
+                                 />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/sMonth"
+                            android:layout_width="@dimen/plan_lay_width"
+                            android:layout_height="@dimen/plan_lay_height"
+                            android:background="@drawable/custom_btn"
+                            android:backgroundTint="@color/primary_light"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            android:padding="@dimen/plan_lay_padding">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Monthly"
+                                android:paddingTop="@dimen/plan_duration_padding_top"
+                                android:paddingBottom="@dimen/plan_duration_padding_bottom"
+                                android:paddingHorizontal="15dp"
+                                android:background="@drawable/custom_btn"
+                                android:backgroundTint="@color/white"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="11sp"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:id="@+id/smonpd"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="- ₹10/day"
+                                android:layout_marginTop="10dp"
+                                android:textSize="@dimen/plan_price_txt"/>
+                            <TextView
+                                android:id="@+id/sMprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="₹ 300"
+                                android:layout_marginBottom="-7dp"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/plan_price_txt_size"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/sLife"
+                            android:layout_width="@dimen/plan_lay_width"
+                            android:layout_height="@dimen/plan_lay_height"
+                            android:background="@drawable/custom_btn"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="visible"
+                            android:padding="@dimen/plan_lay_padding">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Lifetime"
+                                android:paddingTop="@dimen/plan_duration_padding_top"
+                                android:paddingBottom="@dimen/plan_duration_padding_bottom"
+                                android:paddingHorizontal="15dp"
+                                android:background="@drawable/custom_btn"
+                                android:backgroundTint="@color/white"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="11sp"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:id="@+id/sLifepd"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="44% off"
+                                android:layout_marginTop="10dp"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/plan_price_txt"/>
+                            <TextView
+                                android:id="@+id/sLprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="₹ 300"
+                                android:layout_marginBottom="-7dp"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/plan_price_txt_size"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <ProgressBar
+                    android:id="@+id/loadingPlans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:indeterminateTint="@color/colorPrimary"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"/>
+                <LinearLayout
+                    android:id="@+id/pWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_marginTop="15dp"
+                    android:paddingHorizontal="15dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:background="@drawable/custom_btn"
+                    android:backgroundTint="@color/gray_bg" >
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Weekly"
+                        android:textColor="@color/primary_txt_color"
+                        android:textSize="@dimen/plan_price_title" />
+                    <TextView
+                        android:id="@+id/pwkpd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="@color/gray"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="7dp"
+                        android:text="58% off"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/plan_offer_txt_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/pWprice"
+                        style="@style/TextView.black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="490.00"
+                        android:textColor="@color/primary_txt_color"
+                        android:textSize="@dimen/plan_price_txt_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_marginTop="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:background="@drawable/custom_btn">
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Monthly"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/plan_price_title"/>
+                    <TextView
+                        android:id="@+id/pmonpd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="7dp"
+                        android:text="58% off"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/plan_offer_txt_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/pMprice"
+                        style="@style/TextView.black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="790.00"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/plan_price_txt_size"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pLife"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_marginTop="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:background="@drawable/custom_btn"
+                    android:backgroundTint="@color/gray_bg">
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Yearly"
+                        android:textColor="@color/primary_txt_color"
+                        android:textSize="@dimen/plan_price_title"/>
+                    <TextView
+                        android:id="@+id/pLifepd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="@color/gray"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="7dp"
+                        android:text="58% off"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/plan_offer_txt_size"/>
+                    <TextView
+                        android:id="@+id/pLprice"
+                        style="@style/TextView.black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="6000.00"
+                        android:textColor="@color/primary_txt_color"
+                        android:textSize="@dimen/plan_price_txt_size"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/product_list_recycle"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingTop="25dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="~ Payment will be charged to your google account at confirmation of purchase.\n~ You can cancel this subscription at any time from your Google Account.\n~ Subscription automatically renew unless auto-renew is disabled at least 24 hours before the end of current period.\n~ Account will be charged for renewal within 24-hour prior to the end of the current period, and identify the cost of renewal."
+                    android:textSize="11.5sp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/mid_black"/>
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:id="@+id/terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:text="Terms of use"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:textColor="@color/mid_black"/>
+                    <View
+                        android:layout_width="0.25dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@color/mid_black"/>
+                    <TextView
+                        android:id="@+id/privacyUrl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Privacy policy"
+                        android:textSize="13sp"
+                        android:textAlignment="center"
+                        android:padding="10dp"
+                        android:textColor="@color/mid_black"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/noPlans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:lottie_autoPlay="true"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            app:lottie_cacheComposition="true"
+            app:lottie_loop="true"
+            app:lottie_speed="1"
+            app:lottie_rawRes="@raw/out_of_stock"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currently plans are "
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_txt_color"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sold out."
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimary"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Come back tomorrow to get the best deals."
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:textColor="@color/mid_black"
+            />
+    </LinearLayout>
+
+</LinearLayout>

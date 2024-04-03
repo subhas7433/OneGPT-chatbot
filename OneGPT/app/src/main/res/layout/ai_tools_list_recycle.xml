@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginVertical="5dp"
+        android:layout_weight="2">
+        <LinearLayout
+            android:id="@+id/toolVA"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/ai_tool_LA_padding"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp"
+            android:background="@drawable/custom_card"
+            android:backgroundTint="@color/gray_bg"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/toolName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Youtube Script"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/ai_tool_title"
+                style="@style/TextView.Bold"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/toolDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:maxLines="3"
+                android:minLines="3"
+                android:layout_marginTop="5dp"
+                android:text="Create fun youtube script ides based on your theme."
+                android:textColor="@color/mid_black"
+                android:textSize="@dimen/ai_tool_des"
+                style="@style/TextView"
+                />
+            <ImageView
+                android:id="@+id/toolIcon"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="end"
+                android:src="@drawable/gpt_logo"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

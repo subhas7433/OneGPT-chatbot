@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/suggestionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/suggestionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="What is the meaning of GPT"/>
+    <ImageView
+        android:id="@+id/paste_auto_suggestion"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/copy_icon"/>
+
+
+</LinearLayout>

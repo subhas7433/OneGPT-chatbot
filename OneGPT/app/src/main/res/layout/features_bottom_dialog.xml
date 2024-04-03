@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/window_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_bottom_dialog_bg"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/line"/>
+
+        <TextView
+            style="@style/TextView.black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Multiple Chat model"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/plan_feature_title_txt_size"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:padding="8dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/gpt_banner"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp">
+            <TextView
+                android:id="@+id/featuresTitle1"
+                style="@style/TextView.black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Features"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/plan_feature_title_txt_size"
+                />
+            <TextView
+                style="@style/TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/feature_chat"
+                android:drawableTint="@color/mid_black"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="@dimen/features_margin_top"
+                android:gravity="center_vertical"
+                android:text="@string/features3"
+                android:textColor="@color/mid_black"
+                android:textSize="@dimen/plan_feature_des_txt_size"/>
+            <TextView
+                style="@style/TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/feature_web"
+                android:drawableTint="@color/mid_black"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="@dimen/features_margin_top"
+                android:gravity="center_vertical"
+                android:text="@string/features2"
+                android:textColor="@color/mid_black"
+                android:textSize="@dimen/plan_feature_des_txt_size"/>
+
+
+
+
+
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ai_tools"
+                android:drawableTint="@color/mid_black"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="@dimen/features_margin_top"
+                android:gravity="center_vertical"
+                android:text="@string/features4"
+                android:textColor="@color/mid_black"
+                android:textSize="@dimen/plan_feature_des_txt_size"/>
+            <TextView
+                style="@style/TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/features_margin_top"
+                android:drawableLeft="@drawable/img_icon"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/mid_black"
+                android:gravity="center_vertical"
+                android:text="@string/features1"
+                android:textColor="@color/mid_black"
+                android:textSize="@dimen/plan_feature_des_txt_size" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/getStarted"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="25dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/custom_btn"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            style="@style/TextView"
+            android:text="Get Started" />
+    </LinearLayout>
+</LinearLayout>

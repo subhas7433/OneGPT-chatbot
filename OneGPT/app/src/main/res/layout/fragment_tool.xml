@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:background="@color/main_layout_bg">
+
+    <!--Top Navbar-->
+    <LinearLayout
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_nav_height"
+        android:paddingBottom="5dp"
+        android:background="@color/toolbar_white"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="10dp"
+        android:translationZ="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="4dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/menu_icon"
+            />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Tools and Info"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/mid_black"
+            android:textSize="@dimen/navbar_title_font_size"
+            style="@style/TextView.black"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
+        <LinearLayout
+            android:id="@+id/openSubscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_btn"
+            android:backgroundTint="@color/premium_bg"
+            android:gravity="center"
+            android:visibility="gone"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="7dp"
+                android:textColor="@color/premium_clr"
+                android:text="Explore"/>
+            <ImageView
+                android:id="@+id/purchaseIMG"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/premium_icon"
+                app:tint="@color/premium_clr"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/chatLV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="8dp"
+                    android:textAllCaps="true"
+                    android:textSize="9sp"
+                    android:letterSpacing="0.1"
+                    style="@style/TextView.Medium"
+                    android:textColor="@color/primary_txt_color"
+                    android:text="You are logged in with"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginBottom="10dp"
+                    android:padding="15dp"
+                    android:background="@drawable/custom_card"
+                    android:backgroundTint="@color/color_primary_light"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/showMain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        style="@style/TextView"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:text="@string/email"/>
+                    <TextView
+                        android:id="@+id/login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:layout_gravity="end"
+                        android:paddingVertical="8dp"
+                        android:paddingHorizontal="16dp"
+                        android:textSize="12sp"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:text="Logout"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="8dp"
+                    android:textAllCaps="true"
+                    android:textSize="9sp"
+                    android:letterSpacing="0.1"
+                    style="@style/TextView.Medium"
+                    android:textColor="@color/primary_txt_color"
+                    android:text="Feature"/>
+                <LinearLayout
+                    android:id="@+id/whatsappGpt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"
+                    android:background="@drawable/custom_card"
+                    android:backgroundTint="@color/gray_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:drawableLeft="@drawable/ad_ai"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="10dp"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/primary_txt_color"
+                        android:text="WhatGPT in your phone"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="52dp"
+                        android:textSize="12.5sp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/mid_black"
+                        android:text="Ad • Use the WhatGPT in you mobile. Just Say 'Hi'."/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="10dp"
+                        android:paddingEnd="20dp"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Open"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/darkMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:background="@drawable/custom_card"
+                    android:backgroundTint="@color/gray_bg"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="52dp"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:paddingStart="10dp"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/primary_txt_color"
+                        android:text="Dark mode"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="20dp"
+                        android:textSize="14sp"
+                        style="@style/TextView.black"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Switch"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="3dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_card"
+                    android:backgroundTint="@color/gray_bg"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/floatingWindow"
+                        android:textStyle="bold"
+                        android:drawablePadding="10dp"
+                        android:paddingTop="2dp"
+                        android:drawableStart="@drawable/float_window"
+                        android:drawableTint="@color/mid_black"
+                        android:paddingHorizontal="10dp"
+                        android:textColor="@color/switch_txt_clr"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textSize="15sp"
+                        android:thumb="@drawable/thumb_big"
+                        app:track="@drawable/switch_track"
+                        android:text="Floating Window"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="12sp"
+                        android:layout_marginStart="45dp"
+                        android:textColor="@color/mid_black"
+                        android:text="This app will display a window floating at the top of other applications."/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="8sp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="45dp"
+                        android:textColor="@color/mid_black"
+                        android:text="* You can open this window from notification if its on."/>
+                </LinearLayout>
+                <FrameLayout
+                    android:id="@+id/ad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textAllCaps="true"
+                    android:textSize="9sp"
+                    android:letterSpacing="0.1"
+                    style="@style/TextView.Medium"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/primary_txt_color"
+                    android:text="About"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="5dp"
+                    android:background="@drawable/custom_card"
+                    android:backgroundTint="@color/gray_bg"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/privacy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="@dimen/abou_pa_va"
+                        android:drawablePadding="@dimen/about_drawble_padd"
+                        android:drawableRight="@drawable/privacy_ic"
+                        android:textColor="@color/mid_black"
+                        android:text="Privacy policy"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/underline_height"
+
+                        android:background="@color/plan_box_bg"/>
+                    <TextView
+                        android:id="@+id/terms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/abou_pa_va"
+                        android:drawablePadding="@dimen/about_drawble_padd"
+                        android:gravity="center_vertical"
+                        android:drawableRight="@drawable/terms_ic"
+                        android:textColor="@color/mid_black"
+                        android:text="Terms and condition"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/underline_height"
+
+                        android:background="@color/plan_box_bg"/>
+                    <TextView
+                        android:id="@+id/contactUs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/abou_pa_va"
+                        android:drawablePadding="@dimen/about_drawble_padd"
+                        android:gravity="center_vertical"
+                        android:drawableRight="@drawable/mail_icon"
+                        android:textColor="@color/mid_black"
+                        android:text="Contact us"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/underline_height"
+
+                        android:background="@color/plan_box_bg"/>
+                    <TextView
+                        android:id="@+id/share"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/abou_pa_va"
+                        android:drawablePadding="@dimen/about_drawble_padd"
+                        android:gravity="center_vertical"
+                        android:drawableRight="@drawable/share_ic"
+                        android:textColor="@color/mid_black"
+                        android:text="Share"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/underline_height"
+                        android:background="@color/plan_box_bg"/>
+                    <TextView
+                        android:id="@+id/rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/abou_pa_va"
+                        android:drawablePadding="@dimen/about_drawble_padd"
+                        android:gravity="center_vertical"
+                        android:drawableRight="@drawable/rate_us_ic"
+                        android:textColor="@color/mid_black"
+                        android:text="Rate on Play Store"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/underline_height"
+                        android:background="@color/plan_box_bg"/>
+
+                    <TextView
+                        android:id="@+id/moreApps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/abou_pa_va"
+                        android:drawablePadding="@dimen/about_drawble_padd"
+                        android:gravity="center_vertical"
+                        android:drawableRight="@drawable/google_play_ic"
+                        android:textColor="@color/mid_black"
+                        android:text="More apps"/>
+                    <TextView
+                        android:id="@+id/logOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/abou_pa_va"
+                        android:visibility="gone"
+                        android:textColor="@color/msg_colour"
+                        android:text="Logout"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="40dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Developed by"
+                    style="@style/TextView"
+                    android:textSize="12sp"
+                    android:textColor="@color/primary_txt_color"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Affix Studio"
+                    style="@style/TextView.black"
+                    android:layout_marginStart="5dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorPrimary"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</LinearLayout>

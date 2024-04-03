@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dialog_with"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/custom_dialog_bg"
+    android:minWidth="@dimen/dialog_with"
+    android:gravity="center"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="20dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact "
+            android:textSize="20sp"
+            android:textColor="@color/mid_black"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="us"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+
+        android:textAlignment="center"
+        android:textColor="@color/mid_black"
+        android:text="Please read the FAQs before reach out."/>
+    <TextView
+        android:id="@+id/faqs"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingVertical="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="FAQs"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginHorizontal="5dp"
+        android:paddingVertical="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/mid_black"
+        android:text="If it's not resolved please share a screenshot or video to our customer care."/>
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/whatsapp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="WhatsApp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:paddingTop="5dp"
+            android:stateListAnimator="@null"
+            app:cornerRadius="@dimen/btn_radious"
+            />
+        <Button
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:backgroundTint="@color/btnLight"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:text="Email"
+            android:textColor="@color/mid_black"
+            android:textSize="14sp"
+            android:paddingTop="5dp"
+            android:stateListAnimator="@null"
+            app:cornerRadius="@dimen/btn_radious"
+            />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Ad = 2 Credit"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#54063243"
+        />
+
+
+</LinearLayout>

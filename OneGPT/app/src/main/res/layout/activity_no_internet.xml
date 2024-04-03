@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".NoInternetActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="440dp"
+            app:lottie_autoPlay="true"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_horizontal"
+            app:lottie_cacheComposition="true"
+            app:lottie_loop="true"
+            app:lottie_speed="1.5"
+            app:lottie_rawRes="@raw/no_internet"/>
+
+        <TextView
+            android:id="@+id/turnOn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:background="@drawable/custom_btn"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            style="@style/TextView"
+            android:text="TURN ON" />
+    </LinearLayout>
+
+</LinearLayout>
